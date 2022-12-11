@@ -6,13 +6,13 @@ app=Flask(__name__)
 def welcome():
     return "Welcome to Kartheek Page"
 
-@app.route('/inner/<int:score>')
+@app.route('/inner/<int:score>')  # creating a sub-directory with a input parameter called score
 def inner(score):
     return "Welcome to Inner Page having a score of "+str(score)
 
 @app.route('/results/<int:score>')
 def inner(score):
-    if(score<15):
+    if(score<18):
         return "Fail"
     else:
         return "Pass"
