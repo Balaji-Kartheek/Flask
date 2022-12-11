@@ -1,3 +1,5 @@
+# Building url dynamically
+
 from flask import Flask
 app=Flask(__name__)
 
@@ -11,7 +13,7 @@ def inner(score):
     return "Welcome to Inner Page having a score of "+str(score)
 
 @app.route('/results/<int:score>')
-def inner(score):
+def inner2(score):
     if(score<18):
         return "Fail"
     else:
